@@ -15,6 +15,11 @@
   <img src="docs/pcb-bottom.png" width="49%" alt="PCB 底面" />
 </p>
 
+<p align="center">
+  <img src="docs/board-photo.jpg" width="38%" alt="实物照片" /><br />
+  <sub>实板：TIP32A + 铝散热片、1 mH 磁环电感、TL494 直插件</sub>
+</p>
+
 ---
 
 ## 特性 / Features
@@ -102,6 +107,7 @@ buck/
 ├── docs/
 │   ├── schematic.png             原理图预览
 │   ├── pcb-top.png / pcb-bottom.png   PCB 预览（顶层红铜 / 底层蓝铜）
+│   ├── board-photo.jpg           实板照片
 │   ├── layout-guidelines.md      PCB 布局规则（含改板 checklist）
 │   ├── layout-rules-original.docx 布局笔记原稿
 │   └── BOM.csv                   物料清单
