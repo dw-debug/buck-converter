@@ -17,7 +17,7 @@
 
 <p align="center">
   <img src="docs/board-photo.jpg" width="38%" alt="实物照片" /><br />
-  <sub>实板：TIP32A + 铝散热片、1 mH 磁环电感、TL494 直插件</sub>
+  <sub>实板（调试中）：TIP32A + 铝散热片、1 mH 磁环电感、TL494 直插件</sub>
 </p>
 
 ---
