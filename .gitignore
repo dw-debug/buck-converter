@@ -1,0 +1,28 @@
+# --- Scratch / local previews ------------------------------------------------
+.preview/
+*.rar
+*.zip
+*.bak
+
+# --- Altium Designer ---------------------------------------------------------
+__Previews/
+History/
+Project Logs for */
+*.~(1).*
+*.SchDocPreview
+*.PcbDocPreview
+*.PcbDoc.htm
+*.SchDoc.htm
+*.DsnWrk
+*.LDF
+*.ddb
+*.OutJob
+*.log
+*.LOG
+
+# --- OS / editor -------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+.vscode/
+.idea/

@@ -1,0 +1,43 @@
+Altium Designer Pick and Place Locations
+E:\AD26\ADproject\buck\Project Outputs for buck\Pick Place for PCB1.txt
+
+========================================================================================================================
+File Design Information:
+
+Date:       30/09/26
+Time:       19:50
+Revision:   Not in VersionControl
+Variant:    No variations
+Units used: mil
+
+Designator Comment      Layer    Footprint         Center-X(mil) Center-Y(mil) Rotation Description                        
+JP4        HDR-1X2      TopLayer KF2EDGK5.08-LI-2P 2940.000      -1620.000     0        2P接插件                              
+C6         1uF          TopLayer C0805_L           970.003       -1420.003     90       贴片电容/MLCC电容                        
+C3         1uF          TopLayer C0805_L           969.997       -1249.997     270      贴片电容/MLCC电容                        
+C1         1uF          TopLayer C0805_L           1015.000      -367.598      270      贴片电容/MLCC电容                        
+U1         15.5*10.5*21 TopLayer PCBComponent_1    1385.000      -265.000      0        "产品尺寸:15.5*10.5*21MM;材 质:6063-T5;" 
+R12        5.1K         TopLayer RS_1/4W           1320.000      -1855.000     0        直插色环电阻                             
+R11        150          TopLayer RS_1/4W           865.000       -1685.000     0        直插色环电阻                             
+R10        0.22         TopLayer RS_1/4W           2405.000      -1740.000     0        直插色环电阻                             
+R9         0.22         TopLayer RS_1/4W           2410.000      -1625.000     0        直插色环电阻                             
+R8         5.1K         TopLayer RS_1/4W           1775.000      -1770.000     180      直插色环电阻                             
+R7         5.1K         TopLayer RS_1/4W           865.000       -1560.000     180      直插色环电阻                             
+R6         1M           TopLayer RS_1/4W           1775.000      -1635.000     180      直插色环电阻                             
+R5         47K          TopLayer RS_1/4W           1820.000      -1340.000     90       直插色环电阻                             
+R4         47K          TopLayer RS_1/4W           1710.000      -1340.000     270      直插色环电阻                             
+R3         150          TopLayer RS_1/4W           1160.000      -735.000      0        直插色环电阻                             
+R2         47           TopLayer RS_1/4W           1015.000      -625.000      0        直插色环电阻                             
+R1         150          TopLayer RS_1/2W           2820.000      -945.000      90       直插色环电阻                             
+Q1         TIP32A       TopLayer TO220A            1375.000      -495.000      0        PNP型中功率三极管                         
+LED1       红色           TopLayer LED0603_R         2819.998      -1304.997     270      贴片LED                              
+L1         1mH          TopLayer LMR135            2145.000      -490.000      0        功率磁环电感                             
+JP3        HDR-1X2      TopLayer KF2EDGK5.08-LI-2P 2950.000      -335.000      0        2P接插件                              
+JP2        HDR-1X2      TopLayer KF2EDGK5.08-LI-2P 420.000       -1615.000     0        2P接插件                              
+JP1        HDR-1X2      TopLayer KF2EDGK5.08-LI-2P 390.000       -350.000      0        2P接插件                              
+i1         TL494        TopLayer DIP16-300         1320.000      -1340.000     180      电源管理IC                             
+D1         MR850        TopLayer DO-201AD          1825.000      -415.000      270      恢复二极管整流器                           
+CE2        100uF/50V    TopLayer CE-3.5*8*11.5     800.000       -318.898      90       直插电解电容                             
+CE1        47uF/25V     TopLayer CE-2.0*5*11       2400.000      -899.370      270      直插电解电容                             
+C2         1uF          TopLayer C0805_L           2590.003      -1110.003     90       贴片电容/MLCC电容                        
+C5         102          TopLayer CC_2.2*5          1590.000      -1176.693     270      瓷片电容                               
+C4         104          TopLayer CC_2.2*5          1590.000      -1410.000     90       瓷片电容                               

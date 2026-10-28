@@ -1,0 +1,25 @@
+# Normalize text files to LF, keep Altium/EDA binaries untouched
+* text=auto eol=lf
+
+*.md      text eol=lf
+*.csv     text eol=lf
+*.txt     text eol=lf
+*.Txt     text eol=lf
+*.gitignore text eol=lf
+*.gitattributes text eol=lf
+
+*.PcbDoc  binary
+*.SchDoc  binary
+*.PrjPcb  binary
+*.PrjPcbStructure binary
+*.dwg     binary
+*.pdf     binary
+*.png     binary
+*.xlsx    binary
+*.apr     binary
+*.APR_LIB binary
+*.EXTREP  binary
+*.LDP     binary
+
+# Fabrication outputs must stay byte-exact for CAM tools
+fabrication/** binary
