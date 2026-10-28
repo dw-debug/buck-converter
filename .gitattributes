@@ -16,6 +16,7 @@
 *.pdf     binary
 *.png     binary
 *.xlsx    binary
+*.docx    binary
 *.apr     binary
 *.APR_LIB binary
 *.EXTREP  binary
