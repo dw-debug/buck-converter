@@ -88,11 +88,16 @@ JP1–JP4 为 KF2EDGK-5.08 两位接插件（输入/输出各两组）；R1 150 
 
 ```
 buck/
-├── buck.PrjPcb                   Altium Designer 工程文件
-├── Sheet1.SchDoc / Sheet1.pdf    原理图源文件与 PDF
-├── PCB1.PcbDoc / PCB1.pdf        PCB 源文件与装配图 PDF
-├── buck-CAM/                     Gerber (RS-274X)、NC 钻孔、贴片坐标、IPC 网表、测试点报告
-├── Project Outputs for buck/     BOM 源表（buck.xlsx）
+├── hardware/                     Altium Designer 工程（设计源文件）
+│   ├── buck.PrjPcb               工程文件
+│   ├── Sheet1.SchDoc             原理图源文件
+│   ├── PCB1.PcbDoc               PCB 源文件
+│   ├── Sheet1.pdf                原理图 PDF
+│   └── Project Outputs for buck/ BOM 源表（buck.xlsx）
+├── fabrication/                  可直接送打样的生产文件
+│   ├── gerber/                   Gerber (RS-274X)、NC 钻孔、贴片坐标、IPC 网表
+│   ├── assembly/                 装配图 PDF
+│   └── stencil/                  钢网层与钢网图（SMD：4×0805 + 1×0603）
 ├── docs/
 │   ├── schematic.png             原理图预览
 │   ├── pcb-top.png / pcb-bottom.png   PCB 预览（由 Gerber 渲染）
@@ -105,9 +110,9 @@ buck/
 
 ## 复现 / Making One
 
-1. **打板**：把 `buck-CAM/` 整个目录打成 zip 直接下单，2 层、1.6 mm FR-4、喷锡或沉金均可，外形 78 × 43 mm（四角 R3 mm）。
+1. **打板**：把 `fabrication/gerber/` 整个目录打成 zip 直接下单，2 层、1.6 mm FR-4、喷锡或沉金均可，外形 78 × 43 mm（四角 R3 mm）。
 2. **备料**：按 [docs/BOM.csv](docs/BOM.csv)。注意 TIP32A 需要 15.5 × 10.5 × 21 mm 铝散热片 **+ 云母绝缘片**（TO-220 背面与散热片之间必须绝缘，散热片固定在 Q1 上且不接地）。
-3. **贴片**：C1、C2、C3、C6 为 0805，LED1 为 0603，钢网层为 `buck-CAM/PCB1.GTP`（顶）与 `PCB1.GBP`（底），钢网图见 `PCB1.pdf`。
+3. **贴片**：C1、C2、C3、C6 为 0805，LED1 为 0603，可用 `fabrication/stencil/` 的钢网层。
 4. **插件与调试**：先校 5 V 基准（TL494 14 脚）、再空载测 V<sub>out</sub>，最后带载至 1 A 并观察纹波与 Q1 温度。
 5. **注意**：输出与输入共地，**非隔离**；输入端 40 V 时 CE2 余量有限，勿超压。
 
@@ -116,7 +121,7 @@ buck/
 - **效率瓶颈**：TIP32A 饱和压降 + 基极驱动 + 续流二极管三处损耗。下一步改为低 R<sub>ds(on)</sub> MOS + 同步整流，预期效率明显提升。
 - **开关频率偏低（23 kHz）**：电感 1 mH、体积偏大；提高频率需重新权衡 BJT 开关损耗与驱动设计。
 - **保护不完整**：尚无输入反接保护、欠压锁定门限可再校核，建议 v1.1 补上。
-- **限流阈值待核实**：15 脚（IN2-）基准由 R7/R11 分压决定。按 BOM 的 R11 = 150 Ω、R7 = 5.1 K，基准 ≈0.143 V、限流 ≈1.3 A；若按 R11 = 5.1 K 计算则是 2.5 V / ≈22.7 A，显然过高。两种结论只差一个电阻取值，**以 `PCB1.PcbDoc` 网络表为准**，详见 [布局规则第 5 节](docs/layout-guidelines.md)。
+- **限流阈值待核实**：15 脚（IN2-）基准由 R7/R11 分压决定。按 BOM 的 R11 = 150 Ω、R7 = 5.1 K，基准 ≈0.143 V、限流 ≈1.3 A；若按 R11 = 5.1 K 计算则是 2.5 V / ≈22.7 A，显然过高。两种结论只差一个电阻取值，**以 `hardware/PCB1.PcbDoc` 网络表为准**，详见 [布局规则第 5 节](docs/layout-guidelines.md)。
 - **去耦缺失**：TL494 12 脚 VCC 与 14 脚 Vref 的 0.1 µF 去耦在原理图上没有画出，PCB 上应补，且要接信号 V-（7 脚）而非 GND。
 - **LED 限流电阻偏小**：R1 = 150 Ω 时约 20 mA，建议改 330–470 Ω。
 - **补偿网络**：当前 RC 取值实测稳定，但瞬态响应与相位裕度未做完整频响测量。
