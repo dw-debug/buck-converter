@@ -8,16 +8,14 @@
 ![EDA](https://img.shields.io/badge/EDA-Altium%20Designer-orange)
 ![Status](https://img.shields.io/badge/status-v1.0%20已验证-green)
 
-![原理图](docs/schematic.png)
+<p align="center">
+  <img src="docs/schematic.png" width="45%" alt="原理图" />
+  <img src="docs/board-photo.jpg" width="54%" alt="实板照片" />
+</p>
 
 <p align="center">
   <img src="docs/pcb-top.png" width="49%" alt="PCB 顶面" />
   <img src="docs/pcb-bottom.png" width="49%" alt="PCB 底面" />
-</p>
-
-<p align="center">
-  <img src="docs/board-photo.jpg" width="38%" alt="实物照片" /><br />
-  <sub>实板（调试中）：TIP32A + 铝散热片、1 mH 磁环电感、TL494 直插件</sub>
 </p>
 
 ---
