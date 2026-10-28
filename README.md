@@ -12,7 +12,7 @@
 
 <p align="center">
   <img src="docs/pcb-top.png" width="49%" alt="PCB 顶面" />
-  <img src="docs/pcb-bottom.png" width="49%" alt="PCB 底面（镜像）" />
+  <img src="docs/pcb-bottom.png" width="49%" alt="PCB 底面" />
 </p>
 
 ---
@@ -93,6 +93,7 @@ buck/
 │   ├── Sheet1.SchDoc             原理图源文件
 │   ├── PCB1.PcbDoc               PCB 源文件
 │   ├── Sheet1.pdf                原理图 PDF
+│   ├── Composite Drawing.pdf     顶/底铜层复合图（PCB 预览图来源）
 │   └── Project Outputs for buck/ BOM 源表（buck.xlsx）
 ├── fabrication/                  可直接送打样的生产文件
 │   ├── gerber/                   Gerber (RS-274X)、NC 钻孔、贴片坐标、IPC 网表
@@ -100,7 +101,7 @@ buck/
 │   └── stencil/                  钢网层与钢网图（SMD：4×0805 + 1×0603）
 ├── docs/
 │   ├── schematic.png             原理图预览
-│   ├── pcb-top.png / pcb-bottom.png   PCB 预览（由 Gerber 渲染）
+│   ├── pcb-top.png / pcb-bottom.png   PCB 预览（顶层红铜 / 底层蓝铜）
 │   ├── layout-guidelines.md      PCB 布局规则（含改板 checklist）
 │   ├── layout-rules-original.docx 布局笔记原稿
 │   └── BOM.csv                   物料清单
